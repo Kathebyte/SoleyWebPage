@@ -159,14 +159,15 @@ body{
 
 .projects{
     background: #f2f2f2;
+
 }
 
 .projects__grid{
     display:grid;
     height: 550px;
     grid-template-areas:
-            "cuerponegro cuerponegro cara sonreir"
-            "cuerponegro cuerponegro img4 img5";
+            "img1 img1 img2 img3"
+            "img1 img1 img4 img5";
     gap: 10px;
 }
 .projects__item{
@@ -175,3 +176,69 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.projects__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+.projects__item:nth-last-of-type(1){
+    grid-area: img1;
+}
+.projects__item:nth-last-of-type(2){
+    grid-area: img2;
+}
+.projects__item:nth-last-of-type(3){
+    grid-area: img3;
+}
+.projects__item:nth-last-of-type(4){
+    grid-area: img4;
+}
+.projects__item:nth-last-of-type(5){
+    grid-area: img5;
+}
+.projects__hover{
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    transform:translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+.projects__item:hover .projects__hover{
+    transform: translateX(0%);
+}
+.projects__icon{
+    margin-top: 10px;
+    font-size: 30px;
+
+}
+
+/*testimonio*/
+.places__lugares{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.places__item{
+    width: 95%;
+    margin: auto;
+    background: #E7E5E5 ;
+    box-shadow: 0 8px rgba(66,66,66, .8);
+    border-radius: 6px;
+    padding: 30px 25px;
+    color: black;
+    margin-bottom: 50px;
+
+}
+
